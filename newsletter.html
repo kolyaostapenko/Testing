@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+		body {
+			margin: 0;
+			font-size: 14px;
+			line-height: 1.25;
+			color: #fff;
+			font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+			overflow-x: hidden;
+		}
+		*, :before, :after {
+			box-sizing: border-box;
+		}
+		a, a:hover {
+			text-decoration: none;
+			cursor: pointer;
+		}
+		img {
+			vertical-align: middle;
+		}
+		.container {
+			max-width: 740px;
+			margin: 0 auto;
+			padding: 0 20px;
+		}
+		.container .col {
+			float: left;
+			width: 50%;
+			padding-right: 20px;
+		}
+		.clearfix:before, .clearfix:after {
+			display: table;
+			content: "";
+		}
+		.clearfix:after {
+			 clear: both;
+		}
+		.wrapper {
+			max-width: 1066px;
+			margin: 0 auto;
+			padding-top: 45px;
+			background: url("https://cp.unisender.com/ru/user_file?resource=images&user_id=2012118&name=pokerschool/bg.jpg") #08090b top center no-repeat;
+		}
+		.newsletter_content {
+			max-width: 800px;
+			margin: 0 auto;
+			background: #0f141b;
+			position: relative;
+		}
+		.newsletter_header {
+			padding: 15px 0;
+		}
+		.newsletter_header .col_logo img {
+			max-width: 100%;
+			height: auto;
+			position: relative;
+			left: -10px;
+		}
+		.newsletter_header .col_social_links {
+			padding: 0;
+		}
+		.newsletter_header .col_social_links .sub_title {
+			margin: 5px 0 10px;
+		}
+		.newsletter_header .col_social_links a {
+			overflow: hidden;
+			color: transparent;
+			float: left;
+			width: 45px;
+			height: 45px;
+			background: url("https://cp.unisender.com/ru/user_file?resource=images&user_id=2012118&name=pokerschool/icons.png") no-repeat;
+			background-position-y: -1px;
+			border: 1px solid #5c5c68;
+			border-radius: 50%;
+		}
+		.newsletter_header .col_social_links a:hover {
+			border-color: #fff;
+			-webkit-box-shadow: 0 0 10px #fff;
+			-moz-box-shadow: 0 0 10px #fff;
+			box-shadow: 0 0 10px #fff;
+		}
+		.newsletter_header .col_social_links .gameleon_link {
+			background-position-x: -1px;
+		}
+		.newsletter_header .col_social_links .gameleon_link:hover {
+			background-position-x: -46px;
+		}
+		.newsletter_header .col_social_links .vk_link {
+			background-position-x: -91px;
+		}
+		.newsletter_header .col_social_links .vk_link:hover {
+			background-position-x: -136px;
+		}
+		.newsletter_header .col_social_links .facebook_link {
+			background-position-x: -181px;
+		}
+		.newsletter_header .col_social_links .facebook_link:hover {
+			background-position-x: -226px;
+		}
+		.newsletter_header .col_social_links .youtube_link {
+			background-position-x: -271px;
+		}
+		.newsletter_header .col_social_links .youtube_link:hover {
+			background-position-x: -316px;
+		}
+		.newsletter_header .col_social_links a+a {
+			margin-left: 42px;
+		}
+		.newsletter_body {
+			background: url("https://cp.unisender.com/ru/user_file?resource=images&user_id=2012118&name=pokerschool/body_bg.jpg") #131a20 0 -85px no-repeat;
+			padding: 20px 0 40px;
+			position: relative;
+		}
+		.newsletter_body .newsletter_title {
+			font-size: 34px;
+			font-weight: 800;
+			text-shadow: 0 2px 4px rgba(4, 4, 4, 0.62);
+			margin-bottom: 25px;
+			text-align: center;
+		}
+		.newsletter_body .newsletter_title strong {
+			color: #126ccc;
+			font-weight: 800;
+		}
+		.newsletter_body .newsletter_desc {
+			font-weight: 300;
+		}
+		.newsletter_body .stars {
+			text-align: center;
+			margin: 20px 0;
+		}
+		.newsletter_body .newsletter_post {
+			margin-right: -20px;
+		}
+		.newsletter_body .newsletter_post .col_img img {
+			width: 100%;
+			height: auto;
+			border: 2px solid #126ccc;
+			border-radius: 2px;
+		}
+		.newsletter_body .newsletter_post .col_img a:hover img {
+			-webkit-box-shadow: 0 0 20px #126ccc;
+			-moz-box-shadow: 0 0 20px #126ccc;
+			box-shadow: 0 0 20px #126ccc;
+		}
+
+		.newsletter_body .newsletter_post {
+			margin-bottom: 30px;
+		}
+		.newsletter_body .newsletter_post .col_desc .post_title {
+			font-size: 26px;
+			font-weight: 600;
+			text-transform: uppercase;
+			position: relative;
+			top: -5px;
+			letter-spacing: -1px;
+		}
+		.newsletter_body .newsletter_post .col_desc .post_desc {
+			margin: 5px 0 15px;
+		}
+		.newsletter_body .newsletter_post .col_desc a {
+			display: block;
+			line-height: 50px;
+			font-size: 26px;
+			font-weight: 700;
+			letter-spacing: -2px;
+			color: #131a21;
+			text-transform: uppercase;
+			text-align: center;
+			border-radius: 3px;
+			background: -webkit-gradient(linear, 0 0, 0 100%, from(#f1dd48), to(#f9a203));
+			background: -webkit-linear-gradient(top, #f1dd48, #f9a203);
+			background: -moz-linear-gradient(top, #f1dd48, #f9a203);
+			background: -o-linear-gradient(top, #f1dd48, #f9a203);
+			background: -ms-linear-gradient(top, #f1dd48, #f9a203);
+			background: linear-gradient(top, #f1dd48, #f9a203);
+			-webkit-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.31);
+			-moz-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.31);
+			box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.31);
+		}
+		.newsletter_body .newsletter_post .col_desc a:hover {
+			background: -webkit-gradient(linear, 0 0, 0 100%, from(#f9a203), to(#f1dd48));
+			background: -webkit-linear-gradient(bottom, #f1dd48, #f9a203);
+			background: -moz-linear-gradient(bottom, #f1dd48, #f9a203);
+			background: -o-linear-gradient(bottom, #f1dd48, #f9a203);
+			background: -ms-linear-gradient(bottom, #f1dd48, #f9a203);
+			background: linear-gradient(bottom, #f1dd48, #f9a203);
+		}
+		.newsletter_footer {
+			padding: 40px;
+			text-align: center;
+		}
+		.chip {
+			position: absolute;
+		}
+		.red_chip {
+			top: -45px;
+			right: -80px;
+		}
+		.green_chip {
+			bottom: 0;
+			right: -60px;
+		}
+		.black_chip {
+			bottom: -60px;
+			left: -50px;
+		}
+		@media (max-width: 817px) {
+			.newsletter_body .newsletter_desc_bottom {
+				margin-right: 40px;
+			}
+		}
+		@media (max-width: 677px) {
+			.container .col {
+				width: 100%;
+			}
+			.newsletter_header .col_social_links {
+				margin: 15px 0 10px;
+			}
+			.newsletter_body .newsletter_post {
+				margin-bottom: 40px;
+			}
+			.newsletter_body .newsletter_post .col_img {
+				margin-bottom: 20px;
+			}
+		}
+		@media (max-width: 377px) {
+			.newsletter_header .col_social_links a+a {
+				margin-left: 20px;
+			}
+			.newsletter_body .newsletter_title {
+				font-size: 28px;
+			}
+			.newsletter_body .newsletter_post .col_desc .post_title {
+				font-size: 22px;
+			}
+		}
+	</style>
+</head>
+<body>
+<div class="wrapper">
+	<div class="newsletter_content">
+		<div class="newsletter_header">
+			<div class="container clearfix">
+				<div class="col col_logo">
+					<img src="https://cp.unisender.com/ru/user_file?resource=images&user_id=2012118&name=pokerschool/logo.png" alt="Логотип Gameleon">
+				</div>
+				<div class="col col_social_links clearfix">
+					<div class="sub_title">
+						Присоединяйтесь к нам в социальных сетях:
+					</div>
+					<a href="javascript:" target="_blank" class="gameleon_link">gameleon</a>
+					<a href="javascript:" target="_blank" class="vk_link">vk</a>
+					<a href="javascript:" target="_blank" class="facebook_link">facebook</a>
+					<a href="javascript:" target="_blank" class="youtube_link">youtube</a>
+				</div>
+			</div>
+		</div>
+		<div class="newsletter_body">
+			<div class="container">
+				<div class="newsletter_title">
+					Мы создаем <strong>новое</strong> поколение игроков в покер!
+				</div>
+				<div class="newsletter_desc">
+					Большинство любителей не задумываются о том, что покер является еще и элементом некого
+					мастерства. Все привыкли считать, что это всего лишь азартная игра наподобие бинго, рулетки или
+					игры в кости. Даже те из них, кто играл в покер некоторое время, на самом деле не понимают этих
+					вещей и при каждом провале думают о том, что им просто попались плохие карты. В конкретных
+					случаях это может быть правдой, но, если мы говорим о дистанции, плюсовости или минусовости,
+					пот-оддсах, эквити, позициях, вероятностях, диапазонах оппонента, показателях худа и т.д. – данные
+					убеждения являются не совсем верными.
+				</div>
+				<div class="stars">
+					<img src="https://cp.unisender.com/ru/user_file?resource=images&user_id=2012118&name=pokerschool/stars.png" alt="stars">
+				</div>
+				<div class="newsletter_post clearfix">
+					<div class="col col_img">
+						<a href="javascript:">
+							<img src="https://cp.unisender.com/ru/user_file?resource=images&user_id=2012118&name=pokerschool/first_post.jpg" alt="">
+						</a>
+					</div>
+					<div class="col col_desc">
+						<div class="post_title">
+							Правила техасского холдема
+						</div>
+						<div class="post_desc">
+							В этом уроке вы познакомитесь с основными терминами и правилами игры в Техасскийхолдем.
+						</div>
+						<a type="button" href="javascript:">Смотреть видео</a>
+					</div>
+				</div>
+				<div class="newsletter_post clearfix">
+					<div class="col col_img">
+						<a href="javascript:">
+							<img src="https://cp.unisender.com/ru/user_file?resource=images&user_id=2012118&name=pokerschool/second_post.jpg" alt="">
+						</a>
+					</div>
+					<div class="col col_desc">
+						<div class="post_title">
+							Комбинации в покере
+						</div>
+						<div class="post_desc">
+							В этом уроке вы познакомитесь с комбинациями в покере
+						</div>
+						<a type="button" href="javascript:">Смотреть видео</a>
+					</div>
+				</div>
+				<div class="newsletter_desc newsletter_desc_bottom">
+					На нашем канале вы узнаете как играть в покер, что для этого нужно. Мы научим вас всем базовых и
+					продвинутых покерных концепций. Благодаря школе GameleonTeam вы станете покер профессионалом!
+				</div>
+			</div>
+			<img class="chip green_chip" src="https://cp.unisender.com/ru/user_file?resource=images&user_id=2012118&name=pokerschool/green_chip.png" alt="">
+			<img class="chip black_chip" src="https://cp.unisender.com/ru/user_file?resource=images&user_id=2012118&name=pokerschool/black_chip.png" alt="">
+		</div>
+		<div class="newsletter_footer">
+			<div class="container">
+				Вы получили это письмо, потому что подписалиcь на новости GameleonTeam. Чтобы не получать письма
+				на адрес, нажмите на ссылку отписки в конце письма.
+			</div>
+		</div>
+		<img class="chip red_chip" src="https://cp.unisender.com/ru/user_file?resource=images&user_id=2012118&name=pokerschool/red_chip.png" alt="">
+	</div>
+</div>
+</body>
+</html>
